@@ -19,9 +19,10 @@ public class UsuarioService {
         return usuarios.stream().map(UsuarioDTO::new).toList();
     }
 
-    public void inserir(UsuarioDTO usuario) {
+    public String inserir(UsuarioDTO usuario) {
         UsuarioEntity usuarioEntity = new UsuarioEntity(usuario);
         usuarioRepository.save(usuarioEntity);
+        return "User registered successfully";
     }
 
     public UsuarioDTO alterar(UsuarioDTO usuario) {

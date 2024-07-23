@@ -20,8 +20,14 @@ public class UsuarioEntity {
     @Column(nullable = false)
     private String nome;
 
-    @Column(nullable = false, unique = true)
-    private String login;
+    @Column(nullable = false)
+    private String documentType;
+
+    @Column(nullable = false)
+    private String documentNumber;
+
+//    @Column(nullable = false, unique = true)
+//    private String login;
 
     @Column(nullable = false)
     private String senha;
@@ -41,12 +47,12 @@ public class UsuarioEntity {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         UsuarioEntity that = (UsuarioEntity) o;
-        return Objects.equals(id, that.id) && Objects.equals(nome, that.nome) && Objects.equals(login, that.login) && Objects.equals(senha, that.senha) && Objects.equals(email, that.email);
+        return Objects.equals(id, that.id) && Objects.equals(nome, that.nome) && Objects.equals(senha, that.senha) && Objects.equals(email, that.email);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, nome, login, senha, email);
+        return Objects.hash(id, nome, senha, email);
     }
 
 }
