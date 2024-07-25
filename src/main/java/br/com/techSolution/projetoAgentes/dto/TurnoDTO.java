@@ -10,7 +10,7 @@ import java.time.LocalDateTime;
 @Data
 public class TurnoDTO {
 
-    private Long agentId;
+    private Long codAgente;
     private String tipoTurno;
     private LocalDateTime dataInicio;
     private LocalDateTime dataFim;

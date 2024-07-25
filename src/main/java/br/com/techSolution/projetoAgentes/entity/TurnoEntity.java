@@ -20,7 +20,7 @@ public class TurnoEntity {
     private Long id;
 
     @Column(nullable = false)
-    private Long agentId;
+    private Long codAgente;
 
     @Column(nullable = false)
     private String tipoTurno;
@@ -56,11 +56,11 @@ public class TurnoEntity {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         TurnoEntity that = (TurnoEntity) o;
-        return extra == that.extra && feriado == that.feriado && minutosPerdidos == that.minutosPerdidos && Objects.equals(id, that.id) && Objects.equals(agentId, that.agentId) && Objects.equals(tipoTurno, that.tipoTurno) && Objects.equals(dataInicio, that.dataInicio) && Objects.equals(dataFim, that.dataFim);
+        return extra == that.extra && feriado == that.feriado && minutosPerdidos == that.minutosPerdidos && Objects.equals(id, that.id) && Objects.equals(codAgente, that.codAgente) && Objects.equals(tipoTurno, that.tipoTurno) && Objects.equals(dataInicio, that.dataInicio) && Objects.equals(dataFim, that.dataFim);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, agentId, tipoTurno, dataInicio, dataFim, extra, feriado, minutosPerdidos);
+        return Objects.hash(id, codAgente, tipoTurno, dataInicio, dataFim, extra, feriado, minutosPerdidos);
     }
 }

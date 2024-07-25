@@ -17,7 +17,7 @@ public class AgenteEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long codAgente;
 
     @Column(nullable = false)
     private String nome;
@@ -55,11 +55,11 @@ public class AgenteEntity {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         AgenteEntity that = (AgenteEntity) o;
-        return Float.compare(that.salarioBase, salarioBase) == 0 && direitoBolsaIdioma == that.direitoBolsaIdioma && direitoPlanoSaude == that.direitoPlanoSaude && Objects.equals(id, that.id) && Objects.equals(nome, that.nome) && Objects.equals(email, that.email) && Objects.equals(dataContratacao, that.dataContratacao);
+        return Float.compare(that.salarioBase, salarioBase) == 0 && direitoBolsaIdioma == that.direitoBolsaIdioma && direitoPlanoSaude == that.direitoPlanoSaude && Objects.equals(codAgente, that.codAgente) && Objects.equals(nome, that.nome) && Objects.equals(email, that.email) && Objects.equals(dataContratacao, that.dataContratacao);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, nome, email, dataContratacao, salarioBase, direitoBolsaIdioma, direitoPlanoSaude);
+        return Objects.hash(codAgente, nome, email, dataContratacao, salarioBase, direitoBolsaIdioma, direitoPlanoSaude);
     }
 }

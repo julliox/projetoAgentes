@@ -26,11 +26,11 @@ public class TurnoService {
     }
 
     public TurnoEntity criarTurno(TurnoDTO turnoDTO) {
-        AgenteEntity agente = agenteRepository.findById(turnoDTO.getAgentId())
+        AgenteEntity agente = agenteRepository.findById(turnoDTO.getCodAgente())
                 .orElseThrow(() -> new RuntimeException("Agente não encontrado"));
 
         TurnoEntity turnoEntity = new TurnoEntity();
-        turnoEntity.setAgentId(agente.getId()); // Define explicitamente a relação
+        turnoEntity.setCodAgente(agente.getCodAgente()); // Define explicitamente a relação
 
         // Copia as demais propriedades do DTO para a entidade
         turnoEntity.setTipoTurno(turnoDTO.getTipoTurno());

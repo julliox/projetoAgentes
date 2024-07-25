@@ -10,7 +10,7 @@ import java.time.LocalDate;
 @Data
 public class AgenteDTO {
 
-    private Long id;
+    private Long codAgente;
     private String nome;
     private String email;
     private LocalDate dataContratacao;
