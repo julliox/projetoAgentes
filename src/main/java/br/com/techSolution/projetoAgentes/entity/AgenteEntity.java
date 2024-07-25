@@ -32,6 +32,8 @@ public class AgenteEntity {
     @Column()
     private float salarioBase;
 
+
+    //TODO VERIFICAR ESSES CAMPOS
     @Column(nullable = false)
     private boolean direitoBolsaIdioma;
 
